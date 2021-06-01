@@ -5,7 +5,6 @@ class Superhero {
 	public $gender;
 	public $team;
 	public $oneline;
-	sssds
 }
 
 ?>
