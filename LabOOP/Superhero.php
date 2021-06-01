@@ -6,7 +6,7 @@ class Superhero {
 	public $team;
 	public $oneline;
 
-public function __construct($name, $gender, $team, $oneliner)
+	public function __construct($name, $gender, $team, $oneliner)
     {
         $this->name = $name;
         $this->gender = $gender;
@@ -17,7 +17,7 @@ public function __construct($name, $gender, $team, $oneliner)
     public function __toString() {
         return json_encode($this);
     }
-    
+
      public function sayOneliner()
     {
         echo '<h2>' . $this->oneliner . '</h2>';
