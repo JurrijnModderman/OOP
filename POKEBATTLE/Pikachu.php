@@ -1,12 +1,12 @@
 <?php
 	class Pikachu extends Pokemon {
 		public $name = 'Pikachu';
-		public $energyType = 'lightning';
-		public $hitPoints = 40;
+		public $energyType = 'Lightning';
+		public $hitPoints = 60;
 		public $health = 100;
-		public $attacks = 1;
-		public $weakness = 2;
-		public $resitance = 4;
+		public $attacks = 2;
+		public $weakness = 1.5;
+		public $resitance = 20;
 
 		public function __construct($name, $energyType, $hitPoints, $health, $attacks, $weakness, $resitance) {
         	$this->name = $name;
