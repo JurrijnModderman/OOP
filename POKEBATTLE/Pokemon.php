@@ -7,9 +7,8 @@
 		public $attacks;
 		public $weakness;
 		public $resitance;
-		public $attackAttacks;
 
-		public function __construct($name, $energyType, $hitPoints, $health, $attacks, $weakness, $resitance, $attackAttacks) {
+		public function __construct($name, $energyType, $hitPoints, $health, $attacks, $weakness, $resitance) {
         	$this->name = $name;
         	$this->energyType = $energyType;
         	$this->hitPoints = $hitPoints;
@@ -17,7 +16,6 @@
         	$this->attacks = $attacks;
         	$this->weakness = $weakness;
         	$this->resitance = $resitance;
-        	$this->attackAttacks = $attackAttacks;
     	}
 
 		public function __toString() {

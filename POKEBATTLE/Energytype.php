@@ -1,5 +1,5 @@
 <?php 
-	class Energytype extends Pokemon {
+	class Energytype {
 		public $energytypeName;
 		public $energytypeValue;
 
