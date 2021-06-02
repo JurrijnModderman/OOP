@@ -2,13 +2,17 @@
 	require 'Pokemon.php';
 	require 'Energytype.php';
 	require 'Attack.php';
+	require 'Pikachu.php';
+	require 'Charmeleon.php';
+	require 'Resistance.php';
+	require 'Weakness.php';
 
-	$pokemon = new Pokemon('Pikachu', 'lightning', 40, 100, 1, 2, 4, 'attack');
-	echo $pokemon;
+	$Pikachu = new Pikachu();
+	echo $Pikachu;
 
-	$Energytype = new Energytype('water', 40);
-	echo $Energytype;
+	// $Energytype = new Energytype('water', 40);
+	// echo $Energytype;
 
-	$attack = new Attack('the punisher', 60);
-	echo $attack;
+	// $attack = new Attack('the punisher', 60);
+	// echo $attack;
 ?>
