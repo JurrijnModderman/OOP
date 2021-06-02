@@ -7,7 +7,7 @@
 	require 'Resistance.php';
 	require 'Weakness.php';
 
-	$Pikachu = new Pikachu();
+	$Pikachu = new Pikachu('Pikachu');
 	echo $Pikachu;
 
 	// $Energytype = new Energytype('water', 40);
