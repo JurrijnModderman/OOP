@@ -5,7 +5,7 @@
 			$energyType = 'Fire';
 			$hitPoints = 60;
 			$health = 100;
-			$attacks = [];
+			$attacks = ['Head Butt', 'Flare'];
 			$weakness = 2;
 			$resitance = 10;
 			parent:: __construct($name, $energyType, $hitPoints, $health, $attacks, $weakness, $resitance);

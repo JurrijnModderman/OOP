@@ -5,7 +5,7 @@
 		 	$energyType = 'lightning';
 		 	$hitPoints = 60;
 		 	$health = 100;
-		 	$attacks = [];
+		 	$attacks = ['Electric Ring', 'Pika Punch'];
 		 	$weakness = 1.5;
 		 	$resitance = 20;
 		 	parent:: __construct($name, $energyType, $hitPoints, $health, $attacks, $weakness, $resitance);
