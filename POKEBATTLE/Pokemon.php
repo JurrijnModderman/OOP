@@ -18,6 +18,10 @@
         	$this->resitance = $resitance;
     	}
 
+		// public function attack() {
+		// 	echo $Pikachu->name . ' valt ' . $Charmeleon->name. ' aan met een ' . $Pikachu->attacks[0]->attackName . ' attack ' . "<br>";
+		// 	echo $Charmeleon->name . ' valt ' . $Pikachu->name . ' aan met een ' . $Charmeleon->attacks[1]->attackName . ' attack';
+		// }
 		public function __toString() {
 	        return json_encode($this);
 	    }

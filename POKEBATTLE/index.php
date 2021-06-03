@@ -12,8 +12,8 @@
 	// Print voor en na de aanval de health uit van de pokemon die wordt aangevallen
 	$Pikachu = new Pikachu('Pikachu');
 	$Charmeleon = new Charmeleon('Charmeleon');
-	echo $Pikachu->name . ' valt ' . $Charmeleon->name. ' aan met een ' . $Pikachu->attacks[0] . ' attack ' . "<br>";
-	echo $Charmeleon->name . ' valt ' . $Pikachu->name . ' aan met een ' . $Charmeleon->attacks[1] . ' attack';
+	echo $Pikachu->name . ' valt ' . $Charmeleon->name. ' aan met een ' . $Pikachu->attacks[0]->attackName . ' attack ' . "<br>";
+	echo $Charmeleon->name . ' valt ' . $Pikachu->name . ' aan met een ' . $Charmeleon->attacks[1]->attackName . ' attack';
 	// echo $Charmeleon;
 
 	// $Energytype = new Energytype('water', 40);

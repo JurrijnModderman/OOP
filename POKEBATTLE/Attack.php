@@ -3,9 +3,9 @@
 		public $attackName;
 		public $attackDamage;
 
-		public function __construct($attackName, $attackDamage) {
-			$this->attackName = $attackName;
-			$this->attackDamage = $attackDamage;
+		public function __construct($attack, $damage) {
+			$this->attackName = $attack;
+			$this->attackDamage = $damage;
 		}
 
 		public function __toString() {
