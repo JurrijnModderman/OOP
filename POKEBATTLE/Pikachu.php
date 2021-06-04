@@ -2,9 +2,9 @@
 	class Pikachu extends Pokemon {
 
 		public function __construct($name) {
-		 	$energyType = 'lightning';
+		 	$energyType = [new Energytype(energyTypeName : 'lightning', energyTypeValue : 'lightning')];
 		 	$hitPoints = 60;
-		 	$health = 100;
+		 	$health = 60;
 		 	$attacks = [new Attack(attack : 'Electric Ring', damage : 50), new Attack(attack : 'Pika Punch', damage : 20)];
 		 	$weakness = 1.5;
 		 	$resitance = 20;
