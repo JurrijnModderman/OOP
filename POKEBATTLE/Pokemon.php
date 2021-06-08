@@ -6,29 +6,32 @@
 		public $health;
 		public $attacks;
 		public $weakness;
-		public $resitance;
+		public $resistance;
 
-		public function __construct($name, $energyType, $hitPoints, $health, $attacks, $weakness, $resitance) {
+		public function __construct($name, $energyType, $hitPoints, $health, $attacks, $weakness, $resistance) {
         	$this->name = $name;
         	$this->energyType = $energyType;
         	$this->hitPoints = $hitPoints;
         	$this->health = $health;
         	$this->attacks = $attacks;
         	$this->weakness = $weakness;
-        	$this->resitance = $resitance;
+        	$this->resistance = $resistance;
     	}
 
 		public function Attack($target, $attackNumber) {
 			echo $this->name . ' Attacks ' . $target->getName() . '<br>';
-			$target->receiveDamage(20, 'lightning', $this->energyType);
+			$target->receiveDamage($this->attacks[$attackNumber], $this->energyType);
 		}
 
-		public function receiveDamage($amountDamage, $energyType, $weaknessEnergyType) {
-			echo $this->name . ' receives damage : ' . $amountDamage . ' with energyType : ' . $energyType . '<br>';
-			if ($this->energyType == $weaknessEnergyType) {
-				$amountDamage *= $this->weakness->weaknessMultiplier;
+		public function receiveDamage($attack, $energyType) {
+			echo $this->name . ' receives damage : ' . $attack->attackDamage . ' with energyType : ' . $energyType->energyTypeName . '<br>';
+			if ($energyType == $this->weakness->weaknessEnergyType) {
+				$attack->attackDamage *= $this->weakness->weaknessMultiplier;
 			}
-			echo $this->name . ' health : ' . $this->health -= $amountDamage;
+			if ($energyType == $this->resistance->resistanceEnergyType) {
+				$attack->attackDamage -= $this->resistance->resistanceValue;
+			}
+			echo $this->name . ' health : ' . $this->health -= $attack->attackDamage;
 			//getweakness
 		}
 
