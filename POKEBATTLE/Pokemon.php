@@ -18,8 +18,18 @@
         	$this->resitance = $resitance;
     	}
 
-		public function attack($health, $hitPoints) {
-			return $health -= $hitPoints;
+		public function Attack($target, $attackNumber) {
+			echo $this->name . ' Attacks ' . $target->getName();
+			$target->receiveDamage(20);
+		}
+
+		public function receiveDamage($amountDamage, $energyType) {
+			echo $this->name . ' receives damage : ' . $amountDamage;
+			//getweakness
+		}
+
+		public function getName() {
+			return $this->name;
 		}
 
 		public function __toString() {
