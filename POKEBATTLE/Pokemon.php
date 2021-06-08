@@ -19,12 +19,12 @@
     	}
 
 		public function Attack($target, $attackNumber) {
-			echo $this->name . ' Attacks ' . $target->getName();
-			$target->receiveDamage(20);
+			echo $this->name . ' Attacks ' . $target->getName() . '<br>';
+			$target->receiveDamage(20, 'lightning');
 		}
 
 		public function receiveDamage($amountDamage, $energyType) {
-			echo $this->name . ' receives damage : ' . $amountDamage;
+			echo $this->name . ' receives damage : ' . $amountDamage . ' and energyType : ' . $energyType;
 			//getweakness
 		}
 
