@@ -24,7 +24,8 @@
 		}
 
 		public function receiveDamage($amountDamage, $energyType) {
-			echo $this->name . ' receives damage : ' . $amountDamage . ' and energyType : ' . $energyType;
+			echo $this->name . ' receives damage : ' . $amountDamage . ' with energyType : ' . $energyType . '<br>';
+			echo $this->name . ' health : ' . $this->health -= $amountDamage;
 			//getweakness
 		}
 
