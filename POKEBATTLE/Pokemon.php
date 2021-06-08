@@ -19,11 +19,12 @@
     	}
 
 		public function Attack($target, $attackNumber) {
-			echo $this->name . ' Attacks ' . $target->getName() . '<br>';
+			echo '<br>' . $this->name . ' Attacks ' . $target->getName() . '<br>';
 			$target->receiveDamage($this->attacks[$attackNumber], $this->energyType);
 		}
 
 		public function receiveDamage($attack, $energyType) {
+			echo 'health : ' . $this->health . '<br>';
 			echo $this->name . ' receives damage : ' . $attack->attackDamage . ' with energyType : ' . $energyType->energyTypeName . '<br>';
 			if ($energyType == $this->weakness->weaknessEnergyType) {
 				$attack->attackDamage *= $this->weakness->weaknessMultiplier;
@@ -32,7 +33,7 @@
 				$attack->attackDamage -= $this->resistance->resistanceValue;
 			}
 			echo $this->name . ' health : ' . $this->health -= $attack->attackDamage;
-			//getweakness
+			echo '<br>';
 		}
 
 		public function getName() {
