@@ -6,8 +6,8 @@
 			$hitPoints = 60;
 			$health = 60;
 			$attacks = [new Attack(attack : 'Head Butt', damage : 10), new Attack(attack : 'Flare', damage : 30)];
-			$weakness = 2;
-			$resitance = 10;
+			$weakness = [new Weakness(weaknessMultiplier : 2, weaknessEnergyType : 'Water');
+		 	$resitance = [new Resistance(resistanceValue : 10, resistanceEnergyType : 'Lightning');
 			parent:: __construct($name, $energyType, $hitPoints, $health, $attacks, $weakness, $resitance);
 
 	   }
