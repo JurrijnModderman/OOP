@@ -20,11 +20,14 @@
 
 		public function Attack($target, $attackNumber) {
 			echo $this->name . ' Attacks ' . $target->getName() . '<br>';
-			$target->receiveDamage(20, 'lightning');
+			$target->receiveDamage(20, 'lightning', $this->energyType);
 		}
 
-		public function receiveDamage($amountDamage, $energyType) {
+		public function receiveDamage($amountDamage, $energyType, $weaknessEnergyType) {
 			echo $this->name . ' receives damage : ' . $amountDamage . ' with energyType : ' . $energyType . '<br>';
+			if ($this->energyType == $weaknessEnergyType) {
+				$amountDamage *= $this->weakness->weaknessMultiplier;
+			}
 			echo $this->name . ' health : ' . $this->health -= $amountDamage;
 			//getweakness
 		}
