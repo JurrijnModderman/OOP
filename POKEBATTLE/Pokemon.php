@@ -19,7 +19,7 @@
     	}
 
 		public function attack($health, $hitPoints) {
-			return $health = $health - $hitPoints;
+			return $health -= $hitPoints;
 		}
 
 		public function __toString() {
