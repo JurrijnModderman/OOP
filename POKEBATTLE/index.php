@@ -22,7 +22,7 @@
 	// $Pikachu->Attack($Charmeleon, 1);
 	// $Charmeleon->Attack($Pikachu, 1);
 
-	echo ' There are ' . Pokemon::getPopulation() . ' pokemons alive! ';
+	echo ' There are ' . Pokemon::getPopulation() . ' pokemon(s) alive! ';
 	// $Charmeleon->attack()->health;
 	// echo $Pikachu->name . ' valt ' . $Charmeleon->name. ' aan met een ' . $Pikachu->attacks[0]->attackName . ' attack ' . "<br>";
 	// echo $Charmeleon->name . ' valt ' . $Pikachu->name . ' aan met een ' . $Charmeleon->attacks[1]->attackName . ' attack';
