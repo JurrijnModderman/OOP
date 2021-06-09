@@ -34,8 +34,7 @@
 			if ($energyType == $this->resistance->resistanceEnergyType) {
 				$attack->attackDamage -= $this->resistance->resistanceValue;
 			}
-			echo $this->name . ' health : ' . $this->health -= $attack->attackDamage;
-			echo ' / ' . $this->hitPoints . '<br>';
+			echo $this->name . ' health : ' . ($this->health -= $attack->attackDamage) . ' / ' . $this->hitPoints . '<br>';
 			if ($this->health <= 0) {
 				self::$populationPokemons--;
 			}
