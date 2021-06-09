@@ -33,4 +33,3 @@
 
 	// $attack = new Attack('the punisher', 60);
 	// echo $attack;
-?>

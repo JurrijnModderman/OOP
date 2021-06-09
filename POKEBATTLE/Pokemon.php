@@ -54,6 +54,4 @@
 		public function __toString() {
 	        return json_encode($this);
 	    }
-	}	
-
-?>
+	}
