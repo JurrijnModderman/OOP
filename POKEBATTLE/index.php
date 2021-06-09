@@ -14,7 +14,13 @@
 	$Charmeleon = new Charmeleon('Charmeleon');
 	$Pikachu->Attack($Charmeleon, 0);
 	$Charmeleon->Attack($Pikachu, 0);
-	Pokemon::getPopulation();
+
+	// $Pikachu = new Pikachu('Pikachu');
+	// $Charmeleon = new Charmeleon('Charmeleon');
+	// $Pikachu->Attack($Charmeleon, 1);
+	// $Charmeleon->Attack($Pikachu, 1);
+
+	echo ' There are ' . Pokemon::getPopulation() . ' pokemons alive! ';
 	// $Charmeleon->attack()->health;
 	// echo $Pikachu->name . ' valt ' . $Charmeleon->name. ' aan met een ' . $Pikachu->attacks[0]->attackName . ' attack ' . "<br>";
 	// echo $Charmeleon->name . ' valt ' . $Pikachu->name . ' aan met een ' . $Charmeleon->attacks[1]->attackName . ' attack';

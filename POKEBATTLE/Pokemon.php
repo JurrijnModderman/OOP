@@ -1,5 +1,6 @@
 <?php 
 	class Pokemon {
+		static $populationPokemons;
 		public $name;
 		public $energyType;
 		public $hitPoints;
@@ -16,6 +17,7 @@
         	$this->attacks = $attacks;
         	$this->weakness = $weakness;
         	$this->resistance = $resistance;
+			self::$populationPokemons++;
     	}
 
 		public function Attack($target, $attackNumber) {
@@ -33,6 +35,9 @@
 				$attack->attackDamage -= $this->resistance->resistanceValue;
 			}
 			echo $this->name . ' health : ' . $this->health -= $attack->attackDamage;
+			if ($this->health <= 0) {
+				self::$populationPokemons--;
+			}
 			echo '<br>';
 		}
 
@@ -40,6 +45,7 @@
 			//check how many pokemons are made
 			// check if the health of a pokemon is less then 0, then population--
 			// echo result
+			return self::$populationPokemons;
 		}
 
 		public function getName() {
