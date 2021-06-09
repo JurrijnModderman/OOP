@@ -13,9 +13,9 @@
 	$Pikachu = new Pikachu('Pikachu');
 	$Charmeleon = new Charmeleon('Charmeleon');
 	$Pikachu->Attack($Charmeleon, 0);
-	// $Charmeleon->Attack($Pikachu, 0);
-	$Charmeleon->Attack($Pikachu, 1);
-	$Charmeleon->Attack($Pikachu, 1);
+	$Charmeleon->Attack($Pikachu, 0);
+	// $Charmeleon->Attack($Pikachu, 1);
+	// $Charmeleon->Attack($Pikachu, 1);
 
 	// $Pikachu = new Pikachu('Pikachu');
 	// $Charmeleon = new Charmeleon('Charmeleon');
