@@ -8,7 +8,7 @@
 		 	$attacks = [new Attack(attack : 'Electric Ring', damage : 50), new Attack(attack : 'Pika Punch', damage : 20)];
 		 	$weakness = new Weakness(weaknessMultiplier : 1.5, weaknessEnergyType : 'Fire');
 		 	$resistance = new Resistance(resistanceValue : 20, resistanceEnergyType : 'Fighting');
-		 	parent:: __construct($name, $energyType, $hitPoints, $health, $attacks, $weakness, $resistance);
+		 	parent:: __construct($name, $energyType, $hitPoints, $health, $attacks, $weakness, $resistance,);
 
 		}
 

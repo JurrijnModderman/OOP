@@ -36,6 +36,12 @@
 			echo '<br>';
 		}
 
+		public static function getPopulation() {
+			//check how many pokemons are made
+			// check if the health of a pokemon is less then 0, then population--
+			// echo result
+		}
+
 		public function getName() {
 			return $this->name;
 		}
