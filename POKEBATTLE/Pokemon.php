@@ -19,7 +19,7 @@
     	}
 
 		public function Attack($target, $attackNumber) {
-			echo '<br>' . $this->name . ' Attacks ' . $target->getName() . '<br>';
+			echo '<br>' . $this->name . ' Attacks ' . $target->getName() . ' with a ' . $this->attacks[$attackNumber]->attackName . ' attack ' . '<br>';
 			$target->receiveDamage($this->attacks[$attackNumber], $this->energyType);
 		}
 
