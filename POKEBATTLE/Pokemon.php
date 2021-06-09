@@ -26,7 +26,7 @@
 		}
 
 		public function receiveDamage($attack, $energyType) {
-			echo $this->name . ' health : ' . $this->health . '<br>';
+			echo $this->name . ' health : ' . $this->health . ' / ' . $this->hitPoints . '<br>';
 			echo $this->name . ' receives damage : ' . $attack->attackDamage . ' with energyType : ' . $energyType->energyTypeName . '<br>';
 			if ($energyType == $this->weakness->weaknessEnergyType) {
 				$attack->attackDamage *= $this->weakness->weaknessMultiplier;
@@ -35,10 +35,10 @@
 				$attack->attackDamage -= $this->resistance->resistanceValue;
 			}
 			echo $this->name . ' health : ' . $this->health -= $attack->attackDamage;
+			echo ' / ' . $this->hitPoints . '<br>';
 			if ($this->health <= 0) {
 				self::$populationPokemons--;
 			}
-			echo '<br>';
 		}
 
 		public static function getPopulation() {
