@@ -24,7 +24,7 @@
 		}
 
 		public function receiveDamage($attack, $energyType) {
-			echo 'health : ' . $this->health . '<br>';
+			echo $this->name . ' health : ' . $this->health . '<br>';
 			echo $this->name . ' receives damage : ' . $attack->attackDamage . ' with energyType : ' . $energyType->energyTypeName . '<br>';
 			if ($energyType == $this->weakness->weaknessEnergyType) {
 				$attack->attackDamage *= $this->weakness->weaknessMultiplier;
