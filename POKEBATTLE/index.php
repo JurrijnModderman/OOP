@@ -10,10 +10,10 @@
 	// Pikachu valt Charmeleon aan met een Electric Ring attack
 	// Charmeleon valt Pikachu aan met een Flare attack
 	// Print voor en na de aanval de health uit van de pokemon die wordt aangevallen
-	$Pikachu = new Pikachu('Pikachu');
-	$Charmeleon = new Charmeleon('Charmeleon');
-	$Pikachu->Attack($Charmeleon, 0);
-	$Charmeleon->Attack($Pikachu, 0);
+	$Pikachu = new Pikachu(name :'Pikachu');
+	$Charmeleon = new Charmeleon(name :'Charmeleon');
+	$Pikachu->Attack(target: $Charmeleon, attackNumber: 0);
+	$Charmeleon->Attack(target: $Pikachu, attackNumber: 0);
 	// $Charmeleon->Attack($Pikachu, 1);
 	// $Charmeleon->Attack($Pikachu, 1);
 
@@ -23,13 +23,4 @@
 	// $Charmeleon->Attack($Pikachu, 1);
 
 	echo ' There are ' . Pokemon::getPopulation() . ' pokemon(s) alive! ';
-	// $Charmeleon->attack()->health;
-	// echo $Pikachu->name . ' valt ' . $Charmeleon->name. ' aan met een ' . $Pikachu->attacks[0]->attackName . ' attack ' . "<br>";
-	// echo $Charmeleon->name . ' valt ' . $Pikachu->name . ' aan met een ' . $Charmeleon->attacks[1]->attackName . ' attack';
-	// echo $Charmeleon;
 
-	// $Energytype = new Energytype('water', 40);
-	// echo $Energytype;
-
-	// $attack = new Attack('the punisher', 60);
-	// echo $attack;
