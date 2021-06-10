@@ -1,6 +1,6 @@
 <?php 
 	class Pokemon {
-		static $populationPokemons;
+		public static $populationPokemons;
 		private $name;
 		private $energyType;
 		private $hitPoints;

@@ -10,10 +10,10 @@
 	// Pikachu valt Charmeleon aan met een Electric Ring attack
 	// Charmeleon valt Pikachu aan met een Flare attack
 	// Print voor en na de aanval de health uit van de pokemon die wordt aangevallen
-	$Pikachu = new Pikachu(name :'Pikachu');
-	$Charmeleon = new Charmeleon(name :'Charmeleon');
-	$Pikachu->Attack(target: $Charmeleon, attackNumber: 0);
-	$Charmeleon->Attack(target: $Pikachu, attackNumber: 0);
+	$pikachu = new Pikachu(name :'Pikachu');
+	$charmeleon = new Charmeleon(name :'Charmeleon');
+	$pikachu->Attack(target: $charmeleon, attackNumber: 0);
+	$charmeleon->Attack(target: $pikachu, attackNumber: 0);
 	// $Charmeleon->Attack($Pikachu, 1);
 	// $Charmeleon->Attack($Pikachu, 1);
 
