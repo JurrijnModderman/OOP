@@ -1,6 +1,9 @@
 <?php
 	class Charmeleon extends Pokemon {
-
+		/**
+		 * magic constructor method to prepare the new objects for use, often accepting arguments that the constructor uses to set required member variables.
+		 * @param string $name
+		 */
 		public function __construct($name) {
 			$energyType = new EnergyType(name : EnergyType::FIRE, energyTypeValue : EnergyType::FIRE);
 			$hitPoints = 60;
