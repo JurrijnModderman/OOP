@@ -12,8 +12,8 @@
 	// Print voor en na de aanval de health uit van de pokemon die wordt aangevallen
 	$pikachu = new Pikachu(name :'Pikachu');
 	$charmeleon = new Charmeleon(name :'Charmeleon');
-	$pikachu->Attack(target: $charmeleon, attackNumber: 0);
-	$charmeleon->Attack(target: $pikachu, attackNumber: 0);
+	$pikachu->attack(target: $charmeleon, attackNumber: 0);
+	$charmeleon->attack(target: $pikachu, attackNumber: 0);
 	// $Charmeleon->Attack($Pikachu, 1);
 	// $Charmeleon->Attack($Pikachu, 1);
 

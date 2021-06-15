@@ -9,32 +9,35 @@
 		private $weakness;
 		private $resistance;
 		//magic constructor method to prepare the new objects for use, often accepting arguments that the constructor uses to set required member variables.
-		public function __construct($name, $energyType, $hitPoints, $health, $attacks, $weakness, $resistance) {
+		public function __construct($name, $energyType, $hitPoints, $attacks, $weakness, $resistance) {
         	$this->name = $name;
         	$this->energyType = $energyType;
         	$this->hitPoints = $hitPoints;
-        	$this->health = $health;
+        	$this->health = $hitPoints;
         	$this->attacks = $attacks;
         	$this->weakness = $weakness;
         	$this->resistance = $resistance;
 			self::$populationPokemons++;
     	}
-		//method to start an attack
-		public function Attack($target, $attackNumber) {
-			echo '<br>' . $this->name . ' Attacks ' . $target->getName() . ' with a ' . $this->attacks[$attackNumber]->attackName . ' attack ' . '<br>';
+		/**
+		 * method to start an attack
+		 *
+		 */
+		public function attack($target, $attackNumber) {
+			echo '<br>' . $this->name . ' Attacks ' . $target->getName() . ' with a ' . $this->attacks[$attackNumber]->name . ' attack ' . '<br>';
 			$target->receiveDamage($this->attacks[$attackNumber], $this->energyType);
 		}
 		//method to calculate the amount of damage the attack method has done
 		private function receiveDamage($attack, $energyType) {
 			echo $this->name . ' health : ' . $this->health . ' / ' . $this->hitPoints . '<br>';
-			echo $this->name . ' receives damage : ' . $attack->attackDamage . ' with energyType : ' . $energyType->energyTypeName . '<br>';
-			if ($energyType == $this->weakness->weaknessEnergyType) {
+			echo $this->name . ' receives damage : ' . $attack->damage . ' with energyType : ' . $energyType->name . '<br>';
+			if ($energyType == $this->weakness->energyType) {
 				$attack->attackDamage *= $this->weakness->weaknessMultiplier;
 			}
-			if ($energyType == $this->resistance->resistanceEnergyType) {
+			else if ($energyType == $this->resistance->energyType) {
 				$attack->attackDamage -= $this->resistance->resistanceValue;
 			}
-			echo $this->name . ' health : ' . ($this->health -= $attack->attackDamage) . ' / ' . $this->hitPoints . '<br>';
+			echo $this->name . ' health : ' . ($this->health -= $attack->damage) . ' / ' . $this->hitPoints . '<br>';
 			if ($this->health <= 0) {
 				self::$populationPokemons--;
 			}

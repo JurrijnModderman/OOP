@@ -1,10 +1,10 @@
 <?php
 	class Weakness {
-		public $weaknessMultiplier;
-		public $weaknessEnergyType;
+		public $multiplier;
+		public $energyType;
 
-		public function __construct($weaknessMultiplier, $weaknessEnergyType) {
-			$this->weaknessMultipier = $weaknessMultiplier;
-			$this->weaknessEnergyType = $weaknessEnergyType;
+		public function __construct($multiplier, $energyType) {
+			$this->multiplier = $multiplier;
+			$this->energyType = $energyType;
 		}
 	}
