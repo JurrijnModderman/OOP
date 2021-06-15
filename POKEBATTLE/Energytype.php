@@ -7,8 +7,4 @@
 			$this->energyTypeName = $energyTypeName;
 			$this->energyTypeValue = $energyTypeValue;
 		}
-
-		public function __toString() {
-	        return json_encode($this);
-	    }
 	}

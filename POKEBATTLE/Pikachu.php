@@ -11,8 +11,4 @@
 		 	parent:: __construct($name, $energyType, $hitPoints, $health, $attacks, $weakness, $resistance,);
 
 		}
-
-		public function __toString() {
-	        return json_encode($this);
-	    }
 	}

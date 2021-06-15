@@ -7,8 +7,4 @@
 			$this->attackName = $attack;
 			$this->attackDamage = $damage;
 		}
-
-		public function __toString() {
-	        return json_encode($this);
-	    }
 	}

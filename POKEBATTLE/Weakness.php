@@ -7,10 +7,4 @@
 			$this->weaknessMultipier = $weaknessMultiplier;
 			$this->weaknessEnergyType = $weaknessEnergyType;
 		}
-
-
-		public function __toString() {
-			return json_encode($this);
-		}
-
 	}

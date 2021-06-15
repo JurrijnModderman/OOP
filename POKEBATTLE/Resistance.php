@@ -7,8 +7,4 @@
 			$this->resistanceValue = $resistanceValue;
 			$this->resistanceEnergyType = $resistanceEnergyType;
 		}
-
-		public function __toString() {
-			return json_encode($this);
-		}
 	}
