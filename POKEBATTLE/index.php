@@ -1,11 +1,13 @@
 <?php 
-	require 'Pokemon.php';
-	require 'EnergyType.php';
-	require 'Attack.php';
-	require 'Pikachu.php';
-	require 'Charmeleon.php';
-	require 'Resistance.php';
-	require 'Weakness.php';
+	spl_autoload_register(function ($class_name) {
+		$file_name = $class_name. '.php';
+		if (!file_exists($file_name)) {
+			return false;
+		}
+    	include $file_name;
+	});
+	
+	use Pokemon\Pokemon;
 
 	// Pikachu valt Charmeleon aan met een Electric Ring attack
 	// Charmeleon valt Pikachu aan met een Flare attack

@@ -1,5 +1,5 @@
 <?php
-	class Charmeleon extends Pokemon {
+	class Charmeleon extends Pokemon\Pokemon {
 		/**
 		 * magic constructor method to prepare the new objects for use, often accepting arguments that the constructor uses to set required member variables.
 		 * @param string $name

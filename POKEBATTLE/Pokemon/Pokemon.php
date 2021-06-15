@@ -1,4 +1,5 @@
 <?php 
+	namespace Pokemon;
 	class Pokemon {
 		public static $populationPokemons;
 		private $name;
