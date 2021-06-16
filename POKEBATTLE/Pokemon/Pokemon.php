@@ -75,6 +75,18 @@
 			return $this->health;
 		}
 		/**
+		 * method to get and return the hitPoints
+		 */
+		public function getHitpoints() {
+			return $this->hitPoints;
+		}
+		/**
+		 * method to get and return the attack
+		 */
+		public function getAttack() {
+			return $this->attacks[$attackNumber]->name;
+		}
+		/**
 		 * method to convert everything to a string
 		 */
 		public function __toString() {
