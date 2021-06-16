@@ -14,8 +14,18 @@
 	// Print voor en na de aanval de health uit van de pokemon die wordt aangevallen
 	$pikachu = new Pikachu(name :'Pikachu');
 	$charmeleon = new Charmeleon(name :'Charmeleon');
-	echo $pikachu->attack(target: $charmeleon, attackNumber: 0);
-	echo $charmeleon->attack(target: $pikachu, attackNumber: 0);
+	$pikachu->attack(target: $charmeleon, attackNumber: 0);
+	$charmeleon->attack(target: $pikachu, attackNumber: 0);
+
+	echo '<br>' . $pikachu . ' Attacks ' . $pikachu->getName() . ' with a ' . $attacks[$attackNumber]->name . ' attack ' . '<br>';
+	echo $pikachu . ' health : ' . $pikachu->getHealth() . ' / ' . $this->hitPoints . '<br>';
+	echo $pikachu . ' receives damage : ' . $attack->damage . ' with energyType : ' . $energyType->name . '<br>';
+	echo $pikachu . ' health : ' . ($pikachu->getHealth -= $attack->damage) . ' / ' . $this->hitPoints . '<br>';
+
+	// echo '<br>' . $charmeleon . ' Attacks ' . $charmeleon->getName() . ' with a ' . $attacks[$attackNumber]->name . ' attack ' . '<br>';
+	// echo $charmeleon . ' health : ' . $$charmeleon->getHealth . ' / ' . $this->hitPoints . '<br>';
+	// echo $charmeleon . ' receives damage : ' . $attack->damage . ' with energyType : ' . $energyType->name . '<br>';
+	// echo $charmeleon . ' health : ' . ($charmeleon->getHealth -= $attack->damage) . ' / ' . $this->hitPoints . '<br>';
 	// $Charmeleon->Attack($Pikachu, 1);
 	// $Charmeleon->Attack($Pikachu, 1);
 

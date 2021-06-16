@@ -34,7 +34,7 @@
 		 * @param int $attackNumber 
 		 */
 		public function attack($target, $attackNumber) {
-			'<br>' . $this->name . ' Attacks ' . $target->getName() . ' with a ' . $this->attacks[$attackNumber]->name . ' attack ' . '<br>';
+			// '<br>' . $this->name . ' Attacks ' . $target->getName() . ' with a ' . $this->attacks[$attackNumber]->name . ' attack ' . '<br>';
 			$target->receiveDamage($this->attacks[$attackNumber], $this->energyType);
 		}
 		/**
@@ -43,15 +43,15 @@
 		 * @param string $energyType 
 		 */
 		private function receiveDamage($attack, $energyType) {
-			$this->name . ' health : ' . $this->health . ' / ' . $this->hitPoints . '<br>';
-			$this->name . ' receives damage : ' . $attack->damage . ' with energyType : ' . $energyType->name . '<br>';
+			// $this->name . ' health : ' . $this->health . ' / ' . $this->hitPoints . '<br>';
+			// $this->name . ' receives damage : ' . $attack->damage . ' with energyType : ' . $energyType->name . '<br>';
 			if ($energyType == $this->weakness->energyType) {
 				$attack->attackDamage *= $this->weakness->weaknessMultiplier;
 			}
 			else if ($energyType == $this->resistance->energyType) {
 				$attack->attackDamage -= $this->resistance->resistanceValue;
 			}
-			$this->name . ' health : ' . ($this->health -= $attack->damage) . ' / ' . $this->hitPoints . '<br>';
+			// $this->name . ' health : ' . ($this->health -= $attack->damage) . ' / ' . $this->hitPoints . '<br>';
 			if ($this->health <= 0) {
 				self::$populationPokemons--;
 			}
@@ -65,8 +65,14 @@
 		/**
 		 * method to get and return the name
 		 */
-		private function getName() {
+		public function getName() {
 			return $this->name;
+		}
+		/**
+		 * method to get and return the health
+		 */
+		public function getHealth() {
+			return $this->health;
 		}
 		/**
 		 * method to convert everything to a string
