@@ -34,8 +34,8 @@
 		 * @param int $attackNumber 
 		 */
 		public function attack($target, $attackNumber) {
-			// '<br>' . $this->name . ' Attacks ' . $target->getName() . ' with a ' . $this->attacks[$attackNumber]->name . ' attack ' . '<br>';
 			$target->receiveDamage($this->attacks[$attackNumber], $this->energyType);
+			return $this->attacks[$attackNumber]->name;
 		}
 		/**
 		 * method to calculate the amount of damage the attack method has done
@@ -43,15 +43,13 @@
 		 * @param string $energyType 
 		 */
 		private function receiveDamage($attack, $energyType) {
-			// $this->name . ' health : ' . $this->health . ' / ' . $this->hitPoints . '<br>';
-			// $this->name . ' receives damage : ' . $attack->damage . ' with energyType : ' . $energyType->name . '<br>';
 			if ($energyType == $this->weakness->energyType) {
-				$attack->attackDamage *= $this->weakness->weaknessMultiplier;
+				$attack->damage *= $this->weakness->weaknessMultiplier;
 			}
 			else if ($energyType == $this->resistance->energyType) {
-				$attack->attackDamage -= $this->resistance->resistanceValue;
+				$attack->damage -= $this->resistance->resistanceValue;
 			}
-			// $this->name . ' health : ' . ($this->health -= $attack->damage) . ' / ' . $this->hitPoints . '<br>';
+			$this->health -= $attack->damage;
 			if ($this->health <= 0) {
 				self::$populationPokemons--;
 			}
