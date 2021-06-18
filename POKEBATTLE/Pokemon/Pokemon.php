@@ -31,7 +31,8 @@
 		/**
 		 * method to start an attack
 		 * @param string $target
-		 * @param int $attackNumber 
+		 * @param int $attackNumber
+		 * @return string $this->attacks[$attackNumber]->name
 		 */
 		public function attack($target, $attackNumber) {
 			$target->receiveDamage($this->attacks[$attackNumber], $this->energyType);
@@ -56,36 +57,42 @@
 		}
 		/**
 		 * method to check how many pokemons are alive
+		 * return int self::$populationPokemons
 		 */
 		public static function getPopulation() {
 			return self::$populationPokemons;
 		}
 		/**
 		 * method to get and return the name
+		 * return string $this->name
 		 */
 		public function getName() {
 			return $this->name;
 		}
 		/**
 		 * method to get and return the health
+		 * return int $this->health
 		 */
 		public function getHealth() {
 			return $this->health;
 		}
 		/**
 		 * method to get and return the hitPoints
+		 * return int $this->hitPoints
 		 */
 		public function getHitpoints() {
 			return $this->hitPoints;
 		}
 		/**
 		 * method to get and return the attack
+		 * return string $this->attacks[$attackNumber]->name
 		 */
 		public function getAttack() {
 			return $this->attacks[$attackNumber]->name;
 		}
 		/**
 		 * method to convert everything to a string
+		 * return string json_encode($this)
 		 */
 		public function __toString() {
 	        return json_encode($this);
